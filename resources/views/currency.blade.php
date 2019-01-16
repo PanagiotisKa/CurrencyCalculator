@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -19,24 +19,23 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    Currency Calculator
-                </div>
-<form action="">
-{{csrf_field()}}
- <!-- CSRF Token pali? -->
-    <label for="">Convert </label>
-    <input type="text" placeholder="a vulue of ">
-    <label for=""> From</label>
-    <input type="text" placeholder="currency">
-    <label for=""> To</label>
-    <input type="text" placeholder="currency">
-
-</form>
-    
+    <body class="text-center">
+        <div class="conteiner">
+            <div class="jumbotron">
+                <h1 class="font-weight-bold">Currency Calculator</h1>
+                    
+                <form action="">
+                {{csrf_field()}}
+                <!-- CSRF Token pali? -->
+                    <label class="font-weight-bold"for="">Convert From</label>
+                    <input type="text" placeholder="currency">
+                    <label class="font-weight-bold" for=""> To</label>
+                    <input type="text" placeholder="currency">
+                    <label class="font-weight-bold" for=""> a value of  </label>
+                    <input type="text">
+                    <button type="submit">Calculate</button>       
+                </form>
+                <h1>Your result is: 3456.45    </h1>
             </div>
         </div>
     </body>
